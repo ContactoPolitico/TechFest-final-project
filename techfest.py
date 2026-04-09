@@ -31,3 +31,21 @@ comida = {
     "Papas": 50,
     "Cebolla": 45,
     "Ajo": 35,
+    "Refresco": 30
+}
+
+carrito = {}
+
+def mostrar_productos():
+    print("------Productos del Supermercado------")
+    for producto, precio in comida.items():
+        print(f"{producto}: RD${precio}")
+def comprar_producto():
+    producto = input("Que producto quieres comprar?: ")
+    if producto in comida:
+        cantidad = int(input("Cantidad: "))
+        carrito[producto] = carrito.get(producto, 0) + cantidad
+        print(f"Agregaste {cantidad} {producto}(s) al carrito")
+    else:
+        print("Producto no existe")
+
