@@ -32,6 +32,7 @@ food = {
     "Tuna": {"price": 85, "stock": 7}
 }
 
+
 history = []
 
 def main(page: ft.Page):
