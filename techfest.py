@@ -44,7 +44,10 @@ def main(page: ft.Page):
 
     message = ft.Text("")
 
+    page.bgcolor = "#e3eacb"
+    
     name_box = ft.TextField(label="Product name", width=200)
+      
     price_box = ft.Text("Price: ", width=120)
     stock_box = ft.Text("Stock: ", width=120)
 
