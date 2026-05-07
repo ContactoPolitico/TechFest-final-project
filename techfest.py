@@ -40,21 +40,22 @@ def main(page: ft.Page):
     page.scroll = "auto"
     page.padding = 20
     page.window_width = 900
-    page.window_height = 700
-
-    message = ft.Text("")
-
+    page.window_height = 800
     page.bgcolor = "#e3eacb"
+
+    message = ft.Text("", size = 18, weight = "bold")
+
+  
     
-    name_box = ft.TextField(label="Product name", width=200)
-      
-    price_box = ft.Text("Price: ", width=120)
-    stock_box = ft.Text("Stock: ", width=120)
+    name_box = ft.TextField(label="Product name", width=250, border_radius=15)
+    price_box = ft.TextField(label="Price", width=120, border_radius=15)
+    stock_box = ft.TextField(label="Stock", width=120, border_radius=15)
 
-    move_name_box = ft.Text("Product: ", width=200)
-    move_amount_box = ft.Text("Amount: ", width=120)
+    move_name_box = ft.Text("Product: ", size=20, weight="bold")
+    move_amount_box = ft.Text("Amount (Stock): ", size=18)
+    display_price = ft.Text("Price: ", size=18)
 
-    delete_box = ft.TextField(label="Delete product", width=200)
+    delete_box = ft.TextField(label="Delete product", width=250, border_radius=15)
 
     products_column = ft.Column(spacing=10)
     history_column = ft.Column(spacing=5)
